@@ -1,0 +1,25 @@
+scope:
+  domains:
+    - example.com
+  buckets:
+    - example-assets
+  organization: "Example Corp (authorized assessment)"
+  allow_any: false
+
+scan:
+  rate_limit: 5
+  timeout: 10
+  workers: 5
+
+safety:
+  metadata_only: true
+  destructive_operations: false
+  require_scope: true
+  max_objects_listed: 50
+
+providers:
+  - s3
+  - gcs
+  - azure
+
+log_level: INFO
