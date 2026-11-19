@@ -89,7 +89,7 @@ class ScanResult:
     findings: List[Finding] = field(default_factory=list)
     scope: Dict[str, Any] = field(default_factory=dict)
     config_summary: Dict[str, Any] = field(default_factory=dict)
-    errors inter List[str] = field(default_factory=list)
+    errors: List[str] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
