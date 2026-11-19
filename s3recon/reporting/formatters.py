@@ -83,10 +83,11 @@ def findings_to_markdown(findings: List[Finding], scan: Optional[ScanResult] = N
 
 def _esc(s: str) -> str:
     return (
-        s.replace("&", "&")
-        .replace("<", "<")
-        .replace(">", ">")
-        .replace('"', """)
+        str(s).replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&#39;")
     )
 
 
